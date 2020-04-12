@@ -1,0 +1,10 @@
+<div class="right" *ngIf="users$">
+
+    <h3>Users List</h3>
+    <ul>
+      <li (click)="deleteUser(user)" *ngFor="let user of users$ | async">
+        <a  target="_blank">{{ user.name }}</a>
+      </li>
+    </ul>
+  
+  </div>
